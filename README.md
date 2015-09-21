@@ -3,7 +3,9 @@ Reproducing Firefox Fetch API charset bug
 
 ### How to run
 
-  1. Install server 
+  1. Get Git and Node.js
+
+  2. Install and run server
 
     ```
     git clone https://github.com/SaschaNaz/ff-fetch-charset-bug.git
@@ -12,7 +14,7 @@ Reproducing Firefox Fetch API charset bug
     node fileserver.js
     ```
   
-  2. Access `//localhost:8080` with Firefox
+  3. Access `//localhost:8080` with Firefox
 
 ### Expected output
 
