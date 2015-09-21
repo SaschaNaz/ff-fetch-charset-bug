@@ -1,0 +1,19 @@
+{
+    "name": "ff-fetch-charset-bug",
+    "author": "Kagami Sascha Rosylight",
+    "homepage": "https://twitter.com/saschanaz/",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Reproducing Firefox Fetch API charset bug",
+    "main": "./fileserver.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/saschanaz/ff-fetch-charset-bug"
+	},
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "devDependencies": {
+        "node-static": "latest"
+    }
+}

@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Firefox Fetch API Bug Test</title>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.Promise) {
+      fetchResult.textContent = xhrResult.textContent = "(Sorry, this test requires Promise support.)}"
+      return;
+    }
+    requestWithXHR().then(function (text) {
+      xhrResult.textContent = text;
+    })
+	
+    if (!window.fetch) {
+      fetchResult.textContent = "(Sorry, this test requires Fetch API support.)"
+    }
+    else {
+      requestWithFetch().then(function (text) { 
+        fetchResult.textContent = text;
+      })
+    }
+  })
+  
+  function requestWithXHR() {
+    return new Promise(function (resolve, reject) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "kanako.txt");
+      xhr.onload = function () { resolve(xhr.response) }
+      xhr.onerror = function (err) { reject(err) };
+      xhr.send();
+    })
+  }
+  function requestWithFetch() {
+    return fetch("kanako.txt")
+      .then(function (response) { return response.text() })
+  }
+  </script>
+</head>
+<body>
+  <h1>Firefox Fetch API Bug Test</h1>
+  <div>
+  Expected: 미무라카나코三村かな子
+  </div>
+  <div>
+    Result with XHR: <span id="xhrResult"></span>
+  </div>
+  <div>
+    Result with Fetch: <span id="fetchResult"></span>
+  </div>
+</body>
+</html>
