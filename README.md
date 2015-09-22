@@ -29,3 +29,4 @@ Result with Fetch: 미무라카나코三村かな子
 Result with XHR: 미무라카나코三村かな子
 Result with Fetch: ����4�|�tΘ�T� NQgK0j0P[ 
 ```
+* Being reproduced in Windows 10 build 10240 and OS X 10.10.4
