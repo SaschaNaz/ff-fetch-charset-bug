@@ -1,6 +1,8 @@
 # ff-fetch-charset-bug
 Reproducing [Firefox Fetch API charset bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1206751) which breaks UTF-16 texts.
 
+_NOTE_: It seems this is not a bug but is [by design](https://bugzilla.mozilla.org/show_bug.cgi?id=1206751). 
+
 ### How to run
 
   1. Get Git and Node.js
